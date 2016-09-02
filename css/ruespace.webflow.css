@@ -98,6 +98,21 @@ html.w-mod-js *[data-ix="slide-down"] {
   .menubutton.w--open {
     background-color: transparent;
   }
+  .topcontent {
+    bottom: 15%;
+  }
+  .videotext {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 479px) {
+  .topcontent {
+    bottom: 10%;
+  }
+  .videotext {
+    font-size: 21px;
+  }
 }
 
 @font-face {
