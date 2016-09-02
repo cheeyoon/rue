@@ -1,0 +1,114 @@
+.bgvideo {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/bgtile.png');
+  background-position: 0px 0px;
+}
+
+.topbar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  display: block;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  font-family: aaux-next, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.navlink {
+  margin-top: 7px;
+  color: #fff;
+}
+
+.navlink:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.topbarlogo {
+  margin-top: 15px;
+  font-family: Altehaasgroteskbold, sans-serif;
+  color: #fff;
+}
+
+.topcontent {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 20%;
+  z-index: 999;
+}
+
+.videotext {
+  display: block;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Bitter, serif;
+  color: #fff;
+  font-size: 28px;
+  line-height: 35px;
+  font-style: normal;
+  text-align: center;
+}
+
+.videobutton {
+  display: block;
+  width: 200px;
+  margin-top: 20%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #000;
+  -webkit-transition: background-color 300ms ease, color 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease;
+  font-family: aaux-next, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.videobutton:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+html.w-mod-js *[data-ix="slide-down"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, -100px);
+  -ms-transform: translate(0px, -100px);
+  transform: translate(0px, -100px);
+}
+
+@media (max-width: 991px) {
+  .navmenu {
+    background-color: transparent;
+  }
+  .menubutton.w--open {
+    background-color: transparent;
+  }
+}
+
+@font-face {
+  font-family: 'Altehaasgroteskbold';
+  src: url('../fonts/AlteHaasGroteskBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Altehaasgroteskregular';
+  src: url('../fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
