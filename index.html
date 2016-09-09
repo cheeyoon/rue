@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Fri Sep 09 2016 08:34:46 GMT+0000 (UTC) -->
+<!-- Last Published: Fri Sep 09 2016 09:50:58 GMT+0000 (UTC) -->
 <html data-wf-page="57c8e9bc120db7d91b479360" data-wf-site="57c8e9bc120db7d91b47935f">
 <head>
   <meta charset="utf-8">
@@ -24,9 +24,9 @@
     jQuery(document).ready(function($){
     		$('[data-typer-targets]').typer();
     		$.typer.options.typerOrder = 'random';
-            $.typer.options.initialDelay = 3000;
+            $.typer.options.initialDelay = 1000;
             $.typer.options.highlightColor = '#7e7e7e';
-            $.typer.options.textColor = '#7e7e7e';
+            $.typer.options.textColor = '#ffffff';
     	});
   </script>
 </head>
@@ -35,7 +35,7 @@
   <div class="topbarbg" data-ix="display-none"></div>
   <div class="topbar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400" data-ix="slide-down">
     <div class="navbar w-container"><a class="toplogo w-hidden-main w-nav-brand" href="#top"><h1 class="topbarlogo">RUE</h1></a>
-      <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#top">Home</a><a class="navlink w-nav-link" href="#about">About</a><a class="navlink w-nav-link" href="#">Film</a><a class="navlink w-nav-link" href="#">Space</a><a class="navlink w-nav-link" href="#">RUE</a>
+      <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="#top">Home</a><a class="navlink w-nav-link" href="#about">About</a><a class="navlink w-nav-link" href="#">Film</a><a class="navlink w-nav-link" href="#space">Space</a><a class="navlink w-nav-link" href="#">RUE</a>
       </nav>
       <div class="menubutton w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -57,6 +57,40 @@
   <div class="film" id="film">
     <div class="video w-embed w-video" style="padding-top: 56.27659574468085%;">
       <iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fplayer.vimeo.com%2Fvideo%2F153782927&amp;url=https%3A%2F%2Fvimeo.com%2F153782927&amp;image=https%3A%2F%2Fi.vimeocdn.com%2Fvideo%2F554164285_1280.jpg&amp;key=c4e54deccf4d4ec997a64902e9a30300&amp;type=text%2Fhtml&amp;schema=vimeo" scrolling="no" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+  </div>
+  <div class="space" id="space">
+    <div class="content w-row">
+      <div class="w-col w-col-4">
+        <div class="wrapper">
+          <h2 class="black subtitle">(x)</h2><img src="images/participate.svg">
+          <h2 class="black subtitle">Participate</h2>
+          <p class="subtext"><em>Host</em> + <em>Support</em>
+            <br>Independents:
+            <br>
+            <br>An exclusive space hosting a curation of forward-thinking independents thinking and working in parallel; for the ones who don't know what's impossible, the inexperienced, ultimately creatives that are enthusiastic about growing ideas</p>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="wrapper">
+          <h2 class="black subtitle">(y)</h2><img src="images/incubate.svg">
+          <h2 class="black subtitle">Incubate</h2>
+          <p class="subtext"><em>Unify</em> + <em>Enable</em>
+            <br>Collaborations:
+            <br>
+            <br>A great group can be a goad, a source of inspiration, support, and a direct influence as projects unite participants together and bring out their collective best; we are engaging in the process of collaborative discovery</p>
+        </div>
+      </div>
+      <div class="w-col w-col-4">
+        <h2 class="black subtitle">(z)</h2>
+        <div class="wrapper"><img src="images/experience.svg">
+          <h2 class="black subtitle">Experience</h2>
+          <p class="subtext"><em>Spark</em> + <em>Spin</em>
+            <br>Happenings:
+            <br>
+            <br>This vibrant work lab, not only hosts people and ideas, but is flexible enough to transform into a series of different social settings. All in which shock the space through interdisciplinary dialogue, events, and experiences</p>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>

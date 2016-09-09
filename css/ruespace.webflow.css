@@ -96,12 +96,9 @@
 }
 
 .buttonw {
-  position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
   display: block;
   width: 200px;
+  height: 38px;
   margin-right: auto;
   margin-left: auto;
   background-color: #fff;
@@ -117,7 +114,9 @@
 }
 
 .buttonw:hover {
-  background-color: #d6d6d6;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
 }
 
 .form {
@@ -183,8 +182,33 @@
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+.subtitle.black {
+  color: #000;
+}
+
+.space {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.wrapper {
+  display: block;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.subtext {
+  margin-bottom: 25px;
+  font-family: aaux-next, sans-serif;
+  color: #7e7e7e;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 html.w-mod-js *[data-ix="slide-down"] {
@@ -215,15 +239,19 @@ html.w-mod-js *[data-ix="display-none"] {
   .menubutton.w--open {
     background-color: transparent;
   }
-  .content {
-    bottom: 15%;
-  }
   .topbarbg {
     height: 65px;
   }
 }
 
 @media (max-width: 767px) {
+  .content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
   .form {
     width: 80%;
   }
@@ -231,12 +259,15 @@ html.w-mod-js *[data-ix="display-none"] {
     background-position: 50% 55%;
     background-size: auto 3000px;
   }
+  .space {
+    height: auto;
+  }
+  .wrapper {
+    width: 80%;
+  }
 }
 
 @media (max-width: 479px) {
-  .content {
-    bottom: 10%;
-  }
   .about {
     background-position: 50% 70%;
     background-size: auto 2000px;
