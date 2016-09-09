@@ -4643,5 +4643,7 @@
  * Webflow: Interactions: Init
  */
 Webflow.require('ix').init([
-  {"slug":"slide-down","name":"Slide Down","value":{"style":{"opacity":0,"x":"0px","y":"-100px","z":"0px"},"triggers":[{"type":"load","stepsA":[{"wait":300},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}}
+  {"slug":"slide-down","name":"Slide Down","value":{"style":{"opacity":0,"x":"0px","y":"-100px","z":"0px"},"triggers":[{"type":"load","stepsA":[{"wait":300},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
+  {"slug":"display-none","name":"Display None","value":{"style":{"display":"none"},"triggers":[]}},
+  {"slug":"display-nav","name":"Display Nav","value":{"style":{},"triggers":[{"type":"scroll","selector":".topbarbg","stepsA":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}]}]}}
 ]);
