@@ -252,11 +252,15 @@ html.w-mod-js *[data-ix="display-none"] {
     -ms-transform: none;
     transform: none;
   }
+  .content.contentmobile {
+    top: 25%;
+  }
   .form {
     width: 80%;
   }
   .about {
-    height: auto;
+    height: 500px;
+    background-position: 50% 55%;
   }
   .home {
     background-position: 50% 55%;
@@ -271,6 +275,9 @@ html.w-mod-js *[data-ix="display-none"] {
 }
 
 @media (max-width: 479px) {
+  .content.contentmobile {
+    top: 10%;
+  }
   .about {
     background-position: 50% 70%;
     background-size: auto 2000px;
