@@ -320,13 +320,6 @@ html.w-mod-js *[data-ix="slide-up-3"] {
   .text {
     margin-top: 0px;
   }
-  .form {
-    left: 50%;
-    width: 90%;
-    -webkit-transform: translate(-50%, 0px);
-    -ms-transform: translate(-50%, 0px);
-    transform: translate(-50%, 0px);
-  }
   .about {
     height: auto;
     background-position: 50% 100%;
