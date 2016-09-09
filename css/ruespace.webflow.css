@@ -227,7 +227,7 @@ html.w-mod-js *[data-ix="display-none"] {
     height: auto;
   }
   .navlink {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   .topbarlogo {
     margin-top: 10px;
@@ -254,6 +254,9 @@ html.w-mod-js *[data-ix="display-none"] {
   }
   .form {
     width: 80%;
+  }
+  .about {
+    height: auto;
   }
   .home {
     background-position: 50% 55%;
