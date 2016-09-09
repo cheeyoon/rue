@@ -84,13 +84,13 @@
 .text {
   display: block;
   width: 80%;
+  margin-top: 75px;
   margin-right: auto;
   margin-left: auto;
   font-family: aaux-next, sans-serif;
   color: #7e7e7e;
-  font-size: 14px;
-  line-height: 35px;
-  text-align: center;
+  font-size: 12px;
+  line-height: 28px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -119,21 +119,14 @@
   color: #fff;
 }
 
-.form {
-  display: block;
-  width: 60%;
-  margin-top: 20%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.videoinput {
+.buttonw.fullwidth {
   width: 100%;
-  font-family: aaux-next, sans-serif;
 }
 
-.videocolumn {
+.form {
+  position: absolute;
   display: block;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -150,7 +143,7 @@
   width: 100vw;
   height: 100vh;
   background-image: url('../images/about.svg');
-  background-position: 50% 58%;
+  background-position: 50% 64%;
   background-size: auto 3000px;
   background-repeat: no-repeat;
 }
@@ -159,7 +152,7 @@
   width: 100vw;
   height: 100vh;
   background-image: url('../images/home.svg');
-  background-position: 50% 53%;
+  background-position: 50% 54%;
   background-size: auto 4000px;
   background-repeat: no-repeat;
 }
@@ -180,6 +173,7 @@
   font-family: aaux-next, sans-serif;
   color: #fff;
   font-size: 14px;
+  line-height: 36px;
   font-weight: 400;
   text-align: center;
   letter-spacing: 3px;
@@ -211,6 +205,40 @@
   font-weight: 300;
 }
 
+.signup {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/signup.svg');
+  background-position: 50% 56%;
+  background-size: auto 4000px;
+  background-repeat: no-repeat;
+}
+
+.input {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.formsuccess {
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-family: aaux-next, sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.formerror {
+  border: 1px solid red;
+  background-color: transparent;
+  font-family: aaux-next, sans-serif;
+  color: red;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 html.w-mod-js *[data-ix="slide-down"] {
   opacity: 0;
   -webkit-transform: translate(0px, -100px);
@@ -239,8 +267,15 @@ html.w-mod-js *[data-ix="display-none"] {
   .menubutton.w--open {
     background-color: transparent;
   }
+  .about {
+    background-position: 50% 66%;
+  }
   .topbarbg {
     height: 65px;
+  }
+  .signup {
+    background-position: 50% 58%;
+    background-size: auto 3500px;
   }
 }
 
@@ -255,12 +290,24 @@ html.w-mod-js *[data-ix="display-none"] {
   .content.contentmobile {
     top: 25%;
   }
+  .content.contentfix {
+    -webkit-transform: translate(0px, -50%);
+    -ms-transform: translate(0px, -50%);
+    transform: translate(0px, -50%);
+  }
+  .text {
+    margin-top: 0px;
+  }
   .form {
-    width: 80%;
+    left: 50%;
+    width: 90%;
+    -webkit-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px);
   }
   .about {
-    height: 500px;
-    background-position: 50% 55%;
+    height: auto;
+    background-position: 50% 100%;
   }
   .home {
     background-position: 50% 55%;
@@ -272,6 +319,11 @@ html.w-mod-js *[data-ix="display-none"] {
   .wrapper {
     width: 80%;
   }
+  .signup {
+    height: 700px;
+    background-position: 50% 60%;
+    background-size: auto 3000px;
+  }
 }
 
 @media (max-width: 479px) {
@@ -279,8 +331,12 @@ html.w-mod-js *[data-ix="display-none"] {
     top: 10%;
   }
   .about {
-    background-position: 50% 70%;
+    background-position: 0px 50%;
     background-size: auto 2000px;
+  }
+  .signup {
+    background-position: 50% 80%;
+    background-size: auto 1500px;
   }
 }
 
