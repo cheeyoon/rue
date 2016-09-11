@@ -184,6 +184,10 @@
   color: #000;
 }
 
+.subtitle.marginbottom {
+  margin-bottom: 50px;
+}
+
 .space {
   width: 100vw;
   height: 100vh;
