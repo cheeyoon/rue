@@ -63,7 +63,7 @@
 
 .navmenu {
   display: block;
-  width: 435px;
+  width: 440px;
   margin-right: auto;
   margin-left: auto;
   float: none;
@@ -88,7 +88,7 @@
   margin-right: auto;
   margin-left: auto;
   font-family: aaux-next, sans-serif;
-  color: #7e7e7e;
+  color: #505050;
   font-size: 12px;
   line-height: 28px;
   font-weight: 300;
@@ -170,7 +170,6 @@
 }
 
 .subtitle {
-  margin-bottom: 50px;
   font-family: aaux-next, sans-serif;
   color: #fff;
   font-size: 14px;
