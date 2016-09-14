@@ -469,25 +469,40 @@
 	var cachedSetTimeout;
 	var cachedClearTimeout;
 
+	function defaultSetTimout() {
+	    throw new Error('setTimeout has not been defined');
+	}
+	function defaultClearTimeout () {
+	    throw new Error('clearTimeout has not been defined');
+	}
 	(function () {
 	    try {
-	        cachedSetTimeout = setTimeout;
-	    } catch (e) {
-	        cachedSetTimeout = function () {
-	            throw new Error('setTimeout is not defined');
+	        if (typeof setTimeout === 'function') {
+	            cachedSetTimeout = setTimeout;
+	        } else {
+	            cachedSetTimeout = defaultSetTimout;
 	        }
+	    } catch (e) {
+	        cachedSetTimeout = defaultSetTimout;
 	    }
 	    try {
-	        cachedClearTimeout = clearTimeout;
-	    } catch (e) {
-	        cachedClearTimeout = function () {
-	            throw new Error('clearTimeout is not defined');
+	        if (typeof clearTimeout === 'function') {
+	            cachedClearTimeout = clearTimeout;
+	        } else {
+	            cachedClearTimeout = defaultClearTimeout;
 	        }
+	    } catch (e) {
+	        cachedClearTimeout = defaultClearTimeout;
 	    }
 	} ())
 	function runTimeout(fun) {
 	    if (cachedSetTimeout === setTimeout) {
 	        //normal enviroments in sane situations
+	        return setTimeout(fun, 0);
+	    }
+	    // if setTimeout wasn't available but was latter defined
+	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+	        cachedSetTimeout = setTimeout;
 	        return setTimeout(fun, 0);
 	    }
 	    try {
@@ -508,6 +523,11 @@
 	function runClearTimeout(marker) {
 	    if (cachedClearTimeout === clearTimeout) {
 	        //normal enviroments in sane situations
+	        return clearTimeout(marker);
+	    }
+	    // if clearTimeout wasn't available but was latter defined
+	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+	        cachedClearTimeout = clearTimeout;
 	        return clearTimeout(marker);
 	    }
 	    try {
@@ -648,7 +668,7 @@
 	  }
 
 	  function createVideoNode (nativeNode) {
-	    var nodeData = nativeNode.dataset;
+	    var nodeData = $(nativeNode).data();
 
 	    if (!nodeData.videoUrls) {
 	      return $('<video />');
@@ -4646,7 +4666,7 @@ Webflow.require('ix').init([
   {"slug":"slide-down","name":"Slide Down","value":{"style":{"opacity":0,"x":"0px","y":"-100px","z":"0px"},"triggers":[{"type":"load","stepsA":[{"wait":300},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
   {"slug":"display-none","name":"Display None","value":{"style":{"display":"none"},"triggers":[]}},
   {"slug":"display-nav","name":"Display Nav","value":{"style":{},"triggers":[{"type":"scroll","selector":".topbarbg","stepsA":[{"display":"none","opacity":0,"transition":"opacity 500ms ease 0ms"}],"stepsB":[{"display":"block","opacity":1,"transition":"opacity 500ms ease 0ms"}]}]}},
-  {"slug":"slide-up","name":"Slide Up","value":{"style":{"opacity":0,"x":"0px","y":"100px","z":"0px"},"triggers":[{"type":"scroll","stepsA":[{"wait":500},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"100px","z":"0px"}]}]}},
-  {"slug":"slide-up-2","name":"Slide Up 2","value":{"style":{"opacity":0,"x":"0px","y":"100px","z":"0px"},"triggers":[{"type":"scroll","stepsA":[{"wait":750},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"100px","z":"0px"}]}]}},
-  {"slug":"slide-up-3","name":"Slide Up 3","value":{"style":{"opacity":0,"x":"0px","y":"100px","z":"0px"},"triggers":[{"type":"scroll","stepsA":[{"wait":1000},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"100px","z":"0px"}]}]}}
+  {"slug":"slide-up","name":"Slide Up","value":{"style":{"opacity":0,"x":"0px","y":"100px","z":"0px"},"triggers":[{"type":"scroll","offsetTop":"30%","stepsA":[{"wait":500},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"100px","z":"0px"}]}]}},
+  {"slug":"slide-up-2","name":"Slide Up 2","value":{"style":{"opacity":0,"x":"0px","y":"100px","z":"0px"},"triggers":[{"type":"scroll","offsetTop":"30%","stepsA":[{"wait":750},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"100px","z":"0px"}]}]}},
+  {"slug":"slide-up-3","name":"Slide Up 3","value":{"style":{"opacity":0,"x":"0px","y":"100px","z":"0px"},"triggers":[{"type":"scroll","offsetTop":"30%","stepsA":[{"wait":1000},{"opacity":1,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[{"opacity":0,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"100px","z":"0px"}]}]}}
 ]);

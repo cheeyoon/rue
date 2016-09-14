@@ -62,11 +62,17 @@
 }
 
 .navmenu {
-  display: block;
-  width: 440px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: auto;
   margin-left: auto;
   float: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .menubutton.w--open {
@@ -139,12 +145,12 @@
   margin-left: auto;
 }
 
-.about {
+.vision {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-image: url('../images/about.svg');
-  background-position: 50% 64%;
+  background-position: 50% 65%;
   background-size: auto 3000px;
   background-repeat: no-repeat;
 }
@@ -153,7 +159,7 @@
   width: 100vw;
   height: 100vh;
   background-image: url('../images/home.svg');
-  background-position: 50% 54%;
+  background-position: 50% 52%;
   background-size: auto 4000px;
   background-repeat: no-repeat;
 }
@@ -170,6 +176,7 @@
 }
 
 .subtitle {
+  margin-top: 100px;
   font-family: aaux-next, sans-serif;
   color: #fff;
   font-size: 14px;
@@ -209,11 +216,11 @@
   font-weight: 300;
 }
 
-.signup {
+.access {
   width: 100vw;
   height: 100vh;
   background-image: url('../images/signup.svg');
-  background-position: 50% 56%;
+  background-position: 50% 54%;
   background-size: auto 4000px;
   background-repeat: no-repeat;
 }
@@ -241,6 +248,62 @@
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.poweredby {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 5%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.superarchitects {
+  font-family: aaux-next, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.link {
+  position: relative;
+  font-family: Fontawesome, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.social {
+  position: relative;
+  left: 0px;
+  right: 0px;
+  bottom: -60%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.sociallink {
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: Fontawesome, sans-serif;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 html.w-mod-js *[data-ix="slide-down"] {
@@ -292,15 +355,18 @@ html.w-mod-js *[data-ix="slide-up-3"] {
   .menubutton.w--open {
     background-color: transparent;
   }
-  .about {
+  .vision {
     background-position: 50% 66%;
   }
   .topbarbg {
     height: 65px;
   }
-  .signup {
+  .access {
     background-position: 50% 58%;
     background-size: auto 3500px;
+  }
+  .social {
+    bottom: -55%;
   }
 }
 
@@ -323,7 +389,7 @@ html.w-mod-js *[data-ix="slide-up-3"] {
   .text {
     margin-top: 0px;
   }
-  .about {
+  .vision {
     height: auto;
     background-position: 50% 100%;
   }
@@ -331,15 +397,18 @@ html.w-mod-js *[data-ix="slide-up-3"] {
     background-position: 50% 55%;
     background-size: auto 3000px;
   }
+  .subtitle {
+    margin-top: 25px;
+  }
   .space {
     height: auto;
   }
   .wrapper {
     width: 80%;
   }
-  .signup {
+  .access {
     height: 700px;
-    background-position: 50% 60%;
+    background-position: 50% 58%;
     background-size: auto 3000px;
   }
 }
@@ -348,13 +417,17 @@ html.w-mod-js *[data-ix="slide-up-3"] {
   .content.contentmobile {
     top: 10%;
   }
-  .about {
+  .vision {
     background-position: 0px 50%;
     background-size: auto 2000px;
   }
-  .signup {
-    background-position: 50% 80%;
+  .access {
+    height: 800px;
+    background-position: 50% 87%;
     background-size: auto 1500px;
+  }
+  .social {
+    bottom: -30%;
   }
 }
 
@@ -367,6 +440,12 @@ html.w-mod-js *[data-ix="slide-up-3"] {
 @font-face {
   font-family: 'Altehaasgroteskregular';
   src: url('../fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fontawesome';
+  src: url('../fonts/FontAwesome.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
