@@ -201,8 +201,12 @@
   margin-bottom: 50px;
 }
 
-.video {
+.story {
   background-color: #fff;
+}
+
+.video {
+  cursor: pointer;
 }
 
 .who {
