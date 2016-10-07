@@ -33,6 +33,7 @@
   color: #d6d6d6;
   font-size: 10px;
   font-weight: 300;
+  letter-spacing: 3px;
 }
 
 .navlink:hover {
@@ -90,7 +91,7 @@
 .text {
   display: block;
   width: 80%;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
   font-family: aaux-next, sans-serif;
@@ -149,10 +150,6 @@
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  background-image: url('../images/about.svg');
-  background-position: 50% 65%;
-  background-size: auto 3000px;
-  background-repeat: no-repeat;
 }
 
 .home {
@@ -179,23 +176,36 @@
   margin-top: 100px;
   font-family: aaux-next, sans-serif;
   color: #fff;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 36px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
   text-transform: uppercase;
 }
 
 .subtitle.black {
+  margin-top: 50px;
   color: #000;
+}
+
+.subtitle.black.margintopless {
+  margin-top: 25px;
+}
+
+.subtitle.black.margintop {
+  margin-top: 100px;
 }
 
 .subtitle.marginbottom {
   margin-bottom: 50px;
 }
 
-.space {
+.video {
+  background-color: #fff;
+}
+
+.who {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -211,9 +221,31 @@
 .subtext {
   margin-bottom: 25px;
   font-family: aaux-next, sans-serif;
-  color: #7e7e7e;
+  color: #505050;
   font-size: 12px;
   font-weight: 300;
+}
+
+.subtext.list {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subtext.list.margintop {
+  margin-top: 100px;
+  margin-bottom: 0px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.subtext.list.unbold {
+  font-weight: 300;
+}
+
+.subtext.center {
+  text-align: center;
 }
 
 .access {
@@ -271,8 +303,9 @@
 
 .link {
   position: relative;
-  font-family: Fontawesome, sans-serif;
+  font-family: aaux-next, sans-serif;
   color: #fff;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -306,6 +339,80 @@
   text-decoration: none;
 }
 
+.vision_slides {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.about {
+  background-image: url('../images/about.svg');
+  background-position: 50% 80%;
+  background-size: auto 2000px;
+  background-repeat: no-repeat;
+}
+
+.arrow {
+  color: #000;
+  font-size: 28px;
+}
+
+.slidenav {
+  height: 75px;
+  font-size: 6px;
+}
+
+.space {
+  background-image: url('../images/space.svg');
+  background-position: 50% 80%;
+  background-size: auto 2000px;
+  background-repeat: no-repeat;
+}
+
+.environment {
+  background-image: url('../images/environment.svg');
+  background-position: 50% 80%;
+  background-size: auto 2000px;
+  background-repeat: no-repeat;
+}
+
+.img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.offerings {
+  background-image: url('../images/offerings.svg');
+  background-position: 50% 80%;
+  background-size: auto 2000px;
+  background-repeat: no-repeat;
+}
+
+.icon {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #d6d6d6;
+  border-radius: 3px;
+  font-family: Fontawesome, sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.spacer {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.separate {
+  border-left: 1px solid #000;
+}
+
 html.w-mod-js *[data-ix="slide-down"] {
   opacity: 0;
   -webkit-transform: translate(0px, -100px);
@@ -332,6 +439,13 @@ html.w-mod-js *[data-ix="slide-up-2"] {
 }
 
 html.w-mod-js *[data-ix="slide-up-3"] {
+  opacity: 0;
+  -webkit-transform: translate(0px, 100px);
+  -ms-transform: translate(0px, 100px);
+  transform: translate(0px, 100px);
+}
+
+html.w-mod-js *[data-ix="slide-up-4"] {
   opacity: 0;
   -webkit-transform: translate(0px, 100px);
   -ms-transform: translate(0px, 100px);
@@ -379,7 +493,9 @@ html.w-mod-js *[data-ix="slide-up-3"] {
     transform: none;
   }
   .content.contentmobile {
-    top: 25%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
   .content.contentfix {
     -webkit-transform: translate(0px, -50%);
@@ -391,7 +507,7 @@ html.w-mod-js *[data-ix="slide-up-3"] {
   }
   .vision {
     height: auto;
-    background-position: 50% 100%;
+    background-color: #fff;
   }
   .home {
     background-position: 50% 55%;
@@ -400,16 +516,35 @@ html.w-mod-js *[data-ix="slide-up-3"] {
   .subtitle {
     margin-top: 25px;
   }
-  .space {
+  .who {
     height: auto;
   }
   .wrapper {
     width: 80%;
   }
+  .subtext {
+    margin-bottom: 50px;
+  }
+  .subtext.list.margintop {
+    display: block;
+    width: 90%;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-left: auto;
+  }
   .access {
     height: 700px;
     background-position: 50% 58%;
     background-size: auto 3000px;
+  }
+  .vision_slides {
+    height: auto;
+  }
+  .about {
+    background-image: none;
+    background-position: 0px 0px;
+    background-size: auto;
+    background-repeat: repeat;
   }
 }
 
