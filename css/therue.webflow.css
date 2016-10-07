@@ -194,7 +194,7 @@
 }
 
 .subtitle.black.margintop {
-  margin-top: 100px;
+  margin-top: 75px;
 }
 
 .subtitle.marginbottom {
@@ -347,7 +347,7 @@
 
 .about {
   background-image: url('../images/about.svg');
-  background-position: 50% 80%;
+  background-position: 50% 82%;
   background-size: auto 2000px;
   background-repeat: no-repeat;
 }
@@ -364,14 +364,14 @@
 
 .space {
   background-image: url('../images/space.svg');
-  background-position: 50% 80%;
+  background-position: 50% 82%;
   background-size: auto 2000px;
   background-repeat: no-repeat;
 }
 
 .environment {
   background-image: url('../images/environment.svg');
-  background-position: 50% 80%;
+  background-position: 50% 82%;
   background-size: auto 2000px;
   background-repeat: no-repeat;
 }
@@ -384,7 +384,7 @@
 
 .offerings {
   background-image: url('../images/offerings.svg');
-  background-position: 50% 80%;
+  background-position: 50% 82%;
   background-size: auto 2000px;
   background-repeat: no-repeat;
 }
@@ -410,7 +410,7 @@
 }
 
 .separate {
-  border-left: 1px solid #000;
+  border-left: 1px solid #d6d6d6;
 }
 
 html.w-mod-js *[data-ix="slide-down"] {
@@ -545,6 +545,9 @@ html.w-mod-js *[data-ix="slide-up-4"] {
     background-position: 0px 0px;
     background-size: auto;
     background-repeat: repeat;
+  }
+  .separate {
+    border-left-style: none;
   }
 }
 
