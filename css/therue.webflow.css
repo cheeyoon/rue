@@ -662,13 +662,16 @@ html.w-mod-js *[data-ix="slide-up-4"] {
   .content.contentmobile {
     top: 10%;
   }
+  .content.down {
+    margin-top: 50px;
+  }
   .vision {
     background-position: 0px 50%;
     background-size: auto 2000px;
   }
   .access {
-    background-position: 50% 110%;
-    background-size: auto 1500px;
+    background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75));
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75));
   }
   .social {
     bottom: -30%;
