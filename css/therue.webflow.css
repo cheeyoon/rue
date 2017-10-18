@@ -667,11 +667,17 @@ html.w-mod-js *[data-ix="slide-up-4"] {
     background-size: auto 2000px;
   }
   .access {
-    background-position: 50% 100%;
+    background-position: 50% 110%;
     background-size: auto 1500px;
   }
   .social {
     bottom: -30%;
+  }
+  .img {
+    max-width: 50%;
+  }
+  .img.full {
+    max-width: 100%;
   }
 }
 
